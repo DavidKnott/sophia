@@ -1,9 +1,9 @@
 FactoryGirl.define do
 
-  # factory :question do
-  #   content "What is the meaning of life?"
-  #   user_id 1
-  # end
+  factory :question do
+    content "What is the meaning of life?"
+    author {FactoryGirl.create(:user)}
+  end
   
   factory :user do
     first_name {Faker::Name.name}

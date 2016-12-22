@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resources 'users', only: [:new, :create, :show, :index, :destroy, :edit, :update]
   end
   resources 'users', only: [:new, :create, :show]
-  resources 'questions', only: [:index, :new, :create, :show]
+  resources 'questions', only: [:index, :new, :create, :show] do
+    resources 'answers', only: [:new, :create, :index]
+  end
   get '/login', to: "sessions#new"
   post '/login', to: "sessions#create"
   get '/logout', to: "sessions#destroy"
