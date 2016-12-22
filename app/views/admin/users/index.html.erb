@@ -1,0 +1,10 @@
+<h1>All Accounts</h1>
+<% @users.each do |user| %>
+  <div class="panel panel-default">
+    <p>Name: <%= user.first_name %> <%= user.last_name %></p>
+    <p>Email: <%= user.email %></p>
+    <p>Username:<%= user.username %></p>
+    <p>Password<%= user.password %></p>
+  </div
+
+<% end %>

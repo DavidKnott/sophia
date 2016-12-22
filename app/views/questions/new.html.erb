@@ -1,0 +1,7 @@
+<h1>Pose a question</h1>
+<%= form_for @question do |f| %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+
+  <%= f.submit "Ask question" %>
+<% end %>
